@@ -69,6 +69,7 @@ public class AngazovanjeServiceImpl implements AngazovanjeService {
             throw new MyEntityAlreadyExist("Angazovanje za dati predmet vec postoji");
         }
     }
+    ///asdasdasdasd
 
     @Override
     public AngazovanjeResponseDto update(AngazovanjeDto angazovanjeDto) {
