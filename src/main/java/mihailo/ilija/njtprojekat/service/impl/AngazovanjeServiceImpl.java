@@ -69,7 +69,7 @@ public class AngazovanjeServiceImpl implements AngazovanjeService {
             throw new MyEntityAlreadyExist("Angazovanje za dati predmet vec postoji");
         }
     }
-
+//asdasd
     @Override
     public AngazovanjeResponseDto update(AngazovanjeDto angazovanjeDto) {
         Optional<Angazovanje> angazovanje = angazovanjeRepository.findById(new AngazovanjePK(angazovanjeDto.getNastavno_osoblje_id(),angazovanjeDto.getPredmet_id()));
