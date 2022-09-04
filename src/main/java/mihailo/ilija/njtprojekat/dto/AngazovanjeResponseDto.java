@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class AngazovanjeResponseDto {
-   private PredmetDto predmetDto;
+    private PredmetDto predmetDto;
     private OblikNastaveDto oblikNastave;
     private OsobljeDto osobljeDto;
 }
