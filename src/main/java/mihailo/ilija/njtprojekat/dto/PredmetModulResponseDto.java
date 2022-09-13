@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class PredmetModulResponseDto {
-    private ModulDto modul;
-    private PredmetDto predmet;
+    private ModulDto modulDto;
+    private PredmetDto predmetDto;
     private int semestar;
 }

@@ -16,7 +16,7 @@ import java.util.Objects;
 @Embeddable
 public class PredmetModulPK implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    //private static final long serialVersionUID = 1L;
 
 
     private int predmet_id;

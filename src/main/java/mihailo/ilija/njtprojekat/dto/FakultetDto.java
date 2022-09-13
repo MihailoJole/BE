@@ -2,6 +2,8 @@ package mihailo.ilija.njtprojekat.dto;
 
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -9,7 +11,7 @@ import java.util.List;
 public class FakultetDto {
     private Integer id;
     private String naziv;
-    private String oblast;
     private String adresa;
+    private String oblast;
     private List<StudijskiProgramDto> studijskiProgrami;
 }
