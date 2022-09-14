@@ -6,6 +6,6 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface StudijskiProgramMapper {
-    StudijskiProgram studijskiProgramDtoToSudijskiProgram (StudijskiProgramDto studijskiProgramDto);
-    StudijskiProgramDto sudijskiProgramToSudijskiProgramDto (StudijskiProgram studijskiProgram);
+    StudijskiProgram studijskiProgramDtoToStudijskiProgram (StudijskiProgramDto studijskiProgramDto);
+    StudijskiProgramDto studijskiProgramToStudijskiProgramDto (StudijskiProgram studijskiProgram);
 }

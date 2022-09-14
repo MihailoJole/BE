@@ -24,23 +24,33 @@ public class FakultetServiceImpl implements FakultetService {
         this.fakultetMapper = fakultetMapper;
     }
 
-
-
-
-//    @Override
-//    public List<FakultetDto> getAllByUniverzitet(UniverzitetDto univerzitetDto) {
-//        return fakultetRepository.findAllByUniverzitetId(univerzitetDto.getId());
-//    }
-
-
-
     @Override
-    public List<FakultetDto> getAllByUniverzitet(int univerzitetId) {
-        return fakultetRepository.findAllByUniverzitet(univerzitetId);
+    public Fakultet findFakultetById(Integer id) {
+        return fakultetRepository.findById(id).get();
     }
 
     @Override
-    public List<FakultetDto> getAll() {
-        return fakultetRepository.findAll().stream().map(fakultet -> fakultetMapper.fakultetToFakultetDto(fakultet)).collect(Collectors.toList());
+    public Fakultet addFakultet(Fakultet fakultet) {
+        return fakultetRepository.save(fakultet);
+    }
+
+    @Override
+    public Fakultet updateFakultet(Fakultet fakultet) {
+        return fakultetRepository.save(fakultet);
+    }
+
+    @Override
+    public void deleteFakultet(Integer id) {
+        fakultetRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Fakultet> findAllFakultetByUniverzitetId(Integer id) {
+        return  fakultetRepository.findAllFakultetByUniverzitetId(id);
+    }
+
+    @Override
+    public List<Fakultet> findAllFakultet() {
+        return fakultetRepository.findAll();
     }
 }

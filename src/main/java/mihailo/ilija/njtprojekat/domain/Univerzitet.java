@@ -15,7 +15,7 @@ public class Univerzitet {
     private int id;
 
     private String naziv;
-
+/*
     @OneToMany(mappedBy = "univerzitet")
-    private List<Fakultet> fakulteti;
+    private List<Fakultet> fakulteti;*/
 }

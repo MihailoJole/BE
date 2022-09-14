@@ -17,10 +17,10 @@ public class Fakultet {
     private String adresa;
 
     //id od univerziteta, vise ka jedan
-
+/*
     @OneToMany(mappedBy = "fakultet")
     private List<StudijskiProgram> studijskiProgrami;
-
+*/
 
     @ManyToOne
     @JoinColumn(name="univerzitet_id")

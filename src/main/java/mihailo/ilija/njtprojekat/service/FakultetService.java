@@ -10,10 +10,17 @@ import java.util.List;
 
 public interface FakultetService {
 
+    Fakultet findFakultetById(Integer id);
+
+    Fakultet addFakultet(Fakultet fakultet);
+
+    Fakultet updateFakultet(Fakultet fakultet);
+
+    void deleteFakultet(Integer id);
 
 
-    List<FakultetDto> getAllByUniverzitet(int univerzitetId);
+    List<Fakultet> findAllFakultet();
 
-    List<FakultetDto> getAll();
 
+ List<Fakultet> findAllFakultetByUniverzitetId(Integer id);
 }
