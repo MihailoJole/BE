@@ -4,10 +4,12 @@ import mihailo.ilija.njtprojekat.dto.UniverzitetDto;
 import mihailo.ilija.njtprojekat.mapper.UniverzitetMapper;
 import mihailo.ilija.njtprojekat.repositories.UniverzitetRepository;
 import mihailo.ilija.njtprojekat.service.UniverzitetService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class UniverzitetServiceImpl implements UniverzitetService {
 
     UniverzitetRepository univerzitetRepository;

@@ -6,7 +6,6 @@ import mihailo.ilija.njtprojekat.dto.UniverzitetDto;
 import mihailo.ilija.njtprojekat.service.FakultetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -22,6 +21,12 @@ public class FakultetController {
 
     public FakultetController(FakultetService fakultetService) {
         this.fakultetService = fakultetService;
+    }
+
+
+    @GetMapping(path = "/{id}")
+    public List<FakultetDto> getAllByUniverzitet(@PathVariable int univerzitetId){
+        return fakultetService.getAllByUniverzitet(univerzitetId);
     }
 
 
