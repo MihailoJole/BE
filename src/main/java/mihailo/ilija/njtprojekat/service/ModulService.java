@@ -7,9 +7,14 @@ import mihailo.ilija.njtprojekat.dto.StudijskiProgramDto;
 import java.util.List;
 
 public interface ModulService {
-    List<ModulDto> getAllBySPId(StudijskiProgramDto studijskiProgramDto);
-    ModulDto save(ModulDto modulDto);
-    ModulDto update(ModulDto modulDto);
-    ModulDto findById(ModulDto modulDto);
+
     void deleteById(int id);
+
+    List<ModulDto> findAllByStudijskiProgramId(Integer id);
+
+    ModulDto findModulDtoById(Integer id);
+
+    ModulDto addModulDto(ModulDto modulDto);
+
+    ModulDto updateModulDto(ModulDto modulDto);
 }

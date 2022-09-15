@@ -4,12 +4,15 @@ import mihailo.ilija.njtprojekat.domain.AngazovanjePK;
 import mihailo.ilija.njtprojekat.dto.AngazovanjeDto;
 import mihailo.ilija.njtprojekat.dto.AngazovanjeResponseDto;
 import mihailo.ilija.njtprojekat.service.AngazovanjeService;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/*@EnableJpaRepositories("mihailo.ilija.njtprojekat.repositories.AngazovanjeRepository")
+@ComponentScan({"mihailo.ilija.njtprojekat.service"})*/
 @RestController
 @RequestMapping(path = "/angazovanje")
 @CrossOrigin("*")
