@@ -19,4 +19,6 @@ public interface StudijskiProgramService {
     StudijskiProgramDto addStudijskiProgramDto(StudijskiProgramDto studijskiProgramDto);
 
     StudijskiProgramDto findStudijskiProgramDtoById(Integer id);
+
+    List<StudijskiProgramDto> getAll();
 }

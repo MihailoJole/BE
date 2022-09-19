@@ -38,8 +38,8 @@ public class ModulServiceImpl implements ModulService {
     }
 
     @Override
-    public List<ModulDto> findAllByStudijskiProgramId(Integer id) {
-        return modulRepository.findAllByStudijskiProgramId(id).stream().map(
+    public List<ModulDto> findAllModulByStudijskiProgramId(Integer id) {
+        return modulRepository.findAllModulByStudijskiProgramId(id).stream().map(
                 modul -> modulMapper.modulToModulDto((Modul) modul)).collect(Collectors.toList());
     }
 

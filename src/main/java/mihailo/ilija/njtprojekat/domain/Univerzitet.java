@@ -1,5 +1,6 @@
 package mihailo.ilija.njtprojekat.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +16,8 @@ public class Univerzitet {
     private int id;
 
     private String naziv;
-/*
+
     @OneToMany(mappedBy = "univerzitet")
-    private List<Fakultet> fakulteti;*/
+    @JsonManagedReference
+    private List<Fakultet> fakulteti;
 }

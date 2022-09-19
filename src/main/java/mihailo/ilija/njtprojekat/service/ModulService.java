@@ -10,7 +10,7 @@ public interface ModulService {
 
     void deleteById(int id);
 
-    List<ModulDto> findAllByStudijskiProgramId(Integer id);
+    List<ModulDto> findAllModulByStudijskiProgramId(Integer id);
 
     ModulDto findModulDtoById(Integer id);
 

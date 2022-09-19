@@ -10,8 +10,8 @@ INSERT INTO nivo_studija (ID,naziv) VALUES (1, 'Osnovne akademske studije');
 INSERT INTO nivo_studija (ID,naziv) VALUES (2, 'Master akademske studije');
 INSERT INTO nivo_studija (ID,naziv) VALUES (3, 'Doktorske akademske studije');
 
-INSERT INTO studijski_program (ID,nivo_studija_id, fakultet_id, naziv, modul, `status` ) VALUES (1, 1, 1, 'ISIT',FALSE,'Published');
-INSERT INTO studijski_program (ID,nivo_studija_id, fakultet_id, naziv, modul, `status`) VALUES (2, 1, 1, 'Menadzment',TRUE,'Not published');
+INSERT INTO studijski_program (ID,nivo_studija_id, fakultet_id, naziv, has_modul, `status` ) VALUES (1, 1, 1, 'ISIT',FALSE,'Published');
+INSERT INTO studijski_program (ID,nivo_studija_id, fakultet_id, naziv, has_modul, `status`) VALUES (2, 1, 1, 'Menadzment',TRUE,'Not published');
 
 INSERT INTO modul (ID,studijski_program_id,Semestar,Naziv) VALUES (1, 1, 1, 'ISIT');
 INSERT INTO modul (ID,studijski_program_id,Semestar,Naziv) VALUES (2, 2, 5, 'Kvalitet');

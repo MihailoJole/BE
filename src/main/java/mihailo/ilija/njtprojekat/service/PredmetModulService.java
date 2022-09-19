@@ -12,4 +12,7 @@ public interface PredmetModulService {
     void deleteById (PredmetModulPK predmetModulPK);
     PredmetModulResponseDto save (PredmetModulDto predmetModulDto);
     PredmetModulResponseDto update(PredmetModulDto predmetModulDto);
+
+    List<PredmetModulResponseDto> getAllByModulId(Integer id);
+
 }

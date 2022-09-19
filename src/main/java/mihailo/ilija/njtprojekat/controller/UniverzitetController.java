@@ -20,12 +20,7 @@ public class UniverzitetController {
     public UniverzitetController(UniverzitetService univerzitetService) {
         this.univerzitetService = univerzitetService;
     }
-    /*@GetMapping
-    public List<UniverzitetDto> getAll(){
-        System.out.println(univerzitetService.getAll().toString());
-        return univerzitetService.getAll();
-    }
-    */
+
     @GetMapping("/all")
     public ResponseEntity<List<Univerzitet>> getAllUniverzitet () {
         List<Univerzitet> univerziteti = univerzitetService.findAllUniverzitet();

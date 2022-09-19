@@ -81,4 +81,11 @@ public class StudijskiProgramServiceImpl implements StudijskiProgramService {
 
     }
 
+    @Override
+    public List<StudijskiProgramDto> getAll() {
+        return studijskiProgramRepository.findAll().stream().map(
+                studijskiProgram -> studijskiProgramMapper.studijskiProgramToStudijskiProgramDto((StudijskiProgram) studijskiProgram)).collect(Collectors.toList());
+        }
+
+
 }

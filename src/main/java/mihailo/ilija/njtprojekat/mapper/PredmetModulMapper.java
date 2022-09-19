@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring", uses = {PredmetMapper.class, ModulMapper.class})
-public interface PremetModulMapper {
+public interface PredmetModulMapper {
 
     @Mapping(source = "predmetModul.predmet", target = "predmetDto")
     @Mapping(source = "predmetModul.modul", target = "modulDto")
