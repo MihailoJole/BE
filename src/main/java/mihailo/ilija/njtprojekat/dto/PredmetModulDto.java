@@ -7,4 +7,8 @@ public class PredmetModulDto {
     private int predmet_id;
     private int modul_id;
     private int semestar;
+    private int pozicija;
+    private boolean izborni;
+    private String grupa;
+    private int godina;
 }

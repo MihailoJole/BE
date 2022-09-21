@@ -29,6 +29,10 @@ public class PredmetModulController {
         return predmetModulService.getAllByModulId(id);
     }
 
+    @GetMapping("/allByModulIdSortByGodinaSortByPozicija/{id}")
+    public List<PredmetModulResponseDto> getAllByModulIdSortByGodinaSortByPozicija(@PathVariable("id") Integer id){
+        return predmetModulService.getAllByModulIdSortByGodinaSortByPozicija(id);
+    }
     @GetMapping("/all")
     public List<PredmetModulResponseDto> getAll(){
         return predmetModulService.getAll();

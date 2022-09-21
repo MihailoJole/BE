@@ -12,4 +12,6 @@ import java.util.Collection;
 public interface PredmetModulRepository extends JpaRepository<PredmetModul, PredmetModulPK> {
 
     Collection<Object> findAllByModulId(Integer id);
+
+    Collection<Object> findAllByModulIdOrderByGodinaAscPozicijaAsc(Integer id);
 }

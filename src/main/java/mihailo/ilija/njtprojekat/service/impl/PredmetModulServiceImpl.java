@@ -82,4 +82,10 @@ public class PredmetModulServiceImpl implements PredmetModulService {
         return predmetModulRepository.findAllByModulId(id).stream().map(predmetModul ->
                 predmetModulMapper.predmetModulToPredmetModulDto((PredmetModul) predmetModul)).collect(Collectors.toList());
     }
+
+    @Override
+    public List<PredmetModulResponseDto> getAllByModulIdSortByGodinaSortByPozicija(Integer id) {
+        return predmetModulRepository.findAllByModulIdOrderByGodinaAscPozicijaAsc(id).stream().map(predmetModul ->
+                predmetModulMapper.predmetModulToPredmetModulDto((PredmetModul) predmetModul)).collect(Collectors.toList());
+    }
 }

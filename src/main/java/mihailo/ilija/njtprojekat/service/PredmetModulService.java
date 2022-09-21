@@ -15,4 +15,5 @@ public interface PredmetModulService {
 
     List<PredmetModulResponseDto> getAllByModulId(Integer id);
 
+    List<PredmetModulResponseDto> getAllByModulIdSortByGodinaSortByPozicija(Integer id);
 }
