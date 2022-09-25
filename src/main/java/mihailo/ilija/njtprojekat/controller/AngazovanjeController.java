@@ -3,6 +3,7 @@ package mihailo.ilija.njtprojekat.controller;
 import mihailo.ilija.njtprojekat.domain.AngazovanjePK;
 import mihailo.ilija.njtprojekat.dto.AngazovanjeDto;
 import mihailo.ilija.njtprojekat.dto.AngazovanjeResponseDto;
+import mihailo.ilija.njtprojekat.dto.PredmetModulResponseDto;
 import mihailo.ilija.njtprojekat.service.AngazovanjeService;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -21,6 +22,11 @@ public class AngazovanjeController {
 
     public AngazovanjeController(AngazovanjeService angazovanjeService) {
         this.angazovanjeService = angazovanjeService;
+    }
+
+    @GetMapping("/allByPredmetId/{id}")
+    public List<AngazovanjeResponseDto> getAllByPredmetId(@PathVariable("id") Integer id){
+        return angazovanjeService.getAllByPredmetId(id);
     }
 
     @GetMapping

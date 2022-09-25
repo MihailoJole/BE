@@ -2,8 +2,10 @@ package mihailo.ilija.njtprojekat.service.impl;
 
 import mihailo.ilija.njtprojekat.domain.Angazovanje;
 import mihailo.ilija.njtprojekat.domain.AngazovanjePK;
+import mihailo.ilija.njtprojekat.domain.PredmetModul;
 import mihailo.ilija.njtprojekat.dto.AngazovanjeDto;
 import mihailo.ilija.njtprojekat.dto.AngazovanjeResponseDto;
+import mihailo.ilija.njtprojekat.dto.PredmetModulResponseDto;
 import mihailo.ilija.njtprojekat.exceptions.MyEntityAlreadyExist;
 import mihailo.ilija.njtprojekat.mapper.AngazovanjeMapper;
 import mihailo.ilija.njtprojekat.mapper.OblikNastaveMapper;
@@ -94,4 +96,11 @@ public class AngazovanjeServiceImpl implements AngazovanjeService {
             throw new MyEntityAlreadyExist("Angazovanje za dati predmet ne postoji");
         }
     }
+
+    @Override
+    public List<AngazovanjeResponseDto> getAllByPredmetId(Integer id) {
+        return angazovanjeRepository.findAllAngazovanjeByPredmetId(id).stream().map(angazovanje ->
+                angazovanjeMapper.angozavanjeToAngazovanjeDto((Angazovanje) angazovanje)).collect(Collectors.toList());
+    }
+
 }

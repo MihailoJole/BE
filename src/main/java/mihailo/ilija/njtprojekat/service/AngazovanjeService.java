@@ -12,4 +12,6 @@ public interface AngazovanjeService {
     void deleteById(AngazovanjePK id);
     AngazovanjeResponseDto save(AngazovanjeDto angazovanjeDto);
     AngazovanjeResponseDto update(AngazovanjeDto angazovanjeDto);
+
+    List<AngazovanjeResponseDto> getAllByPredmetId(Integer id);
 }

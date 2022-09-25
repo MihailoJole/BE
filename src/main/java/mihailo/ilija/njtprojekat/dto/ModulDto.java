@@ -7,6 +7,6 @@ import mihailo.ilija.njtprojekat.domain.StudijskiProgram;
 public class ModulDto {
     private Integer id;
     private String naziv;
-    private int semester;
+    private int semestar;
     private StudijskiProgram studijskiProgram;
 }
