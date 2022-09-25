@@ -28,7 +28,7 @@ public class AngazovanjeController {
     public List<AngazovanjeResponseDto> getAllByPredmetId(@PathVariable("id") Integer id){
         return angazovanjeService.getAllByPredmetId(id);
     }
-
+//getAngazovanjeById
     @GetMapping
     public List<AngazovanjeResponseDto> getAll(){
         return angazovanjeService.getAll();

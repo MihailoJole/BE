@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 
 @Getter
@@ -13,12 +14,12 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class PredmetModul {
+public class PredmetModul  {
 
 
     @EmbeddedId
-    private PredmetModulPK predmetModulPK;
-    private int semestar;
+    private PredmetModulPK predmetModulPK= new PredmetModulPK();
+
     @ManyToOne
     @MapsId("predmet_id")
     private Predmet predmet;
@@ -26,7 +27,7 @@ public class PredmetModul {
     @ManyToOne
     @MapsId("modul_id")
     private Modul modul;
-
+    private int semestar;
     private int pozicija;
     private boolean izborni;
     private String grupa;

@@ -1,9 +1,6 @@
 package mihailo.ilija.njtprojekat.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;
@@ -14,6 +11,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Embeddable
+@Data
 public class PredmetModulPK implements Serializable {
 
     //private static final long serialVersionUID = 1L;

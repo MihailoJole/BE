@@ -55,21 +55,28 @@ public class PredmetModulServiceImpl implements PredmetModulService {
 
     @Override
     public PredmetModulResponseDto save(PredmetModulDto predmetModulDto) {
-       /* System.out.println(angazovanjeDto.getPredmet_id());
-        System.out.println(angazovanjeDto.getNastavno_osoblje_id());
-        Optional<Angazovanje> angazovanje = angazovanjeRepository.findById(new AngazovanjePK(angazovanjeDto.getPredmet_id(),angazovanjeDto.getNastavno_osoblje_id()));
-        if(!angazovanje.isPresent()){
-            Angazovanje angazovanje1 = new Angazovanje();
-            angazovanje1.setPredmet(predmetRepository.getById((angazovanjeDto.getPredmet_id())));
-            angazovanje1.setOblikNastave(oblikNastaveMapper.dtoToOblikNastave(angazovanjeDto.getOblikNastave()));
-            angazovanje1.setNastavnoOsoblje(nastavnoOsobljeRepository.getById(angazovanjeDto.getNastavno_osoblje_id()));
-            angazovanjeRepository.save(angazovanje1);
-            return angazovanjeMapper.angozavanjeToAngazovanjeDto(angazovanje1);
+
+        //modul_id,predmet_id,semestar, pozicija,izborni,grupa,godina*/
+        System.out.println(predmetModulDto.getPredmet_id());
+        System.out.println(predmetModulDto.getModul_id());
+        Optional<PredmetModul> predmetModul = predmetModulRepository.findById(new PredmetModulPK(predmetModulDto.getPredmet_id(),predmetModulDto.getModul_id()));
+        if(!predmetModul.isPresent()){
+            PredmetModul predmetModul1 = new PredmetModul();
+            predmetModul1.setPredmet(predmetRepository.getById((predmetModulDto.getPredmet_id())));
+            predmetModul1.setModul(modulRepository.getById((predmetModulDto.getModul_id())));
+            predmetModul1.setSemestar(predmetModulDto.getSemestar());
+            predmetModul1.setPozicija(predmetModulDto.getPozicija());
+            predmetModul1.setIzborni(predmetModulDto.isIzborni());
+            predmetModul1.setGrupa(predmetModulDto.getGrupa());
+            predmetModul1.setGodina(predmetModulDto.getGodina());
+
+            predmetModulRepository.save(predmetModul1);
+            System.out.println(predmetModul1.getPredmetModulPK());
+            return predmetModulMapper.predmetModulToPredmetModulDto(predmetModul1);
         }
         else {
-            throw new MyEntityAlreadyExist("Angazovanje za dati predmet vec postoji");
-        }*/
-        return null;
+            throw new MyEntityAlreadyExist("PredmetModul vec postoji");
+        }
     }
 
     @Override

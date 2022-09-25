@@ -12,4 +12,5 @@ public class PredmetModulResponseDto {
     private boolean izborni;
     private String grupa;
     private int godina;
+
 }
